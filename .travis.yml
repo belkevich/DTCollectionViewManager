@@ -19,4 +19,4 @@ script:
     - xcodebuild -workspace DTCollectionViewManager.xcworkspace -scheme DTCollectionViewManager -configuration Debug -sdk iphonesimulator -destination "$DESTINATION" test -enableCodeCoverage YES | xcpretty -tc
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -d
